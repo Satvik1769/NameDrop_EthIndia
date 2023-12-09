@@ -55,6 +55,9 @@
   --grad13: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
   --grad14: linear-gradient(180deg, #2af598 0%, #009efd 100%);
   --grad15: linear-gradient(to bottom, #ffefba, #ffffff);
+  --grad16: linear-gradient(to bottom, #dbd65c, #5614b0);
+  --grad17: linear-gradient(to bottom, #fceabb, #f8b500);
+  --grad18: linear-gradient(to bottom, #f79d00, #64f38c);
 }
 /* } */
 
@@ -71,15 +74,23 @@ body {
     transform: translateX(0%);
   }
 }
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 @keyframes slideDown {
   0% {
-    transform: translateY(-50%);
+    transform: translateY(-25%);
   }
   50% {
     transform: translateY(0%);
   }
   100% {
-    transform: translateY(-50%);
+    transform: translateY(-25%);
   }
 }
 @keyframes slideIn {
@@ -87,7 +98,7 @@ body {
     transform: translateY(0%);
   }
   50% {
-    transform: translateY(-50%);
+    transform: translateY(-25%);
   }
   100% {
     transform: translateY(0%);
@@ -113,7 +124,7 @@ body {
 }
 
 .moveLeft {
-  animation: moveLeft 25s linear infinite;
+  animation: moveLeft 50s linear infinite;
 }
 .moveRight {
   animation: moveRight 50s linear infinite;
@@ -188,7 +199,7 @@ button {
 
 /* text */
 h1 {
-  font-size: clamp(50px, 7vw, 84px);
+  font-size: clamp(50px, 15vw, 84px);
   color: #fff;
   font-family: Montserrat;
   font-style: normal;
@@ -283,7 +294,7 @@ h2 {
 }
 
 .container {
-  max-width: 1260px;
+  max-width: 1440px;
   padding: 0 30px;
 }
 

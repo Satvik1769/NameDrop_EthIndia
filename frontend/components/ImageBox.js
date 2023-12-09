@@ -15,7 +15,7 @@ const ImageBox = ({
   return (
     <div
       style={style}
-      className={`card w-[${contHeight.toString()}px] h-[${contWidth.toString()}px] fcc ${className}`}
+      className={`p-1 card w-[${contHeight.toString()}px] h-[${contWidth.toString()}px] fcc ${className}`}
     >
       <div
         className="flex"
