@@ -13,6 +13,7 @@ const HomeHero = () => {
       >
         <HeroLeftText />
         <Image
+          priority={true}
           className="lg:right-[-50px] "
           style={{
             position: "relative",

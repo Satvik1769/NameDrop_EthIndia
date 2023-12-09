@@ -33,7 +33,7 @@ const BannerPart = ({ z = 0, arrLen = 10, rotate = "1" }) => {
       {arr.map((item, index) => (
         <div
           key={index}
-          className="flex moveRight flex-shrink-0 mr-3"
+          className={`flex ${z ? "moveRight" : "moveLeft"} flex-shrink-0 mr-3`}
           style={{
             width: "max-content",
           }}
