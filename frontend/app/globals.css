@@ -1,0 +1,314 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base { */
+:root {
+  --bg: #1b242d;
+  --bg1: #212a33;
+  --bg2: #2a333e;
+  --yellow: #f8bc00;
+  --text: #99a8b8;
+  --text1: #fafafa;
+  --border: #3c4857;
+  --green: #62ffb1;
+  --green1: #b1ff67;
+  --green2: #a1fe7c;
+  --purple: #b095ff;
+  --pink: #ee87ff;
+  --peach: #ff9899;
+  --peach1: #ee839e;
+  --grad_border: linear-gradient(
+    60deg,
+    #cbff99 10%,
+    #c6f6b3 20%,
+    #d1f0a9 30%,
+    #f6db88 60%,
+    #e799ad 75%,
+    #d693e1 90%,
+    #b9a5f6 100%
+  );
+  /* gradients */
+  --grad1: linear-gradient(
+    203deg,
+    #1b286e 1.35%,
+    #4b9ad1 65.64%,
+    #ede9be 102.29%
+  );
+  --grad2: linear-gradient(180deg, #c6ffdd 0%, #fbd786 51.56%, #f7797d 100%);
+  --grad3: linear-gradient(180deg, #2980b9 0%, #6dd5fa 57.49%, #fff 111.5%);
+  --grad4: linear-gradient(136deg, #00ff87 2.45%, #60efff 100%);
+  --grad5: linear-gradient(136deg, #ff1b6b 2.45%, #45caff 100%);
+  --grad6: linear-gradient(90deg, #ff930f 0%, #fff95b 100%);
+  --grad6: linear-gradient(136deg, #f9035e -14.21%, #a8f368 103.23%);
+  --grad7: linear-gradient(46deg, #84ffc9 0%, #aab2ff 50.3%, #eca0ff 102.75%);
+  --grad8: linear-gradient(46deg, #f4d444 0%, #f86ca7 102.75%);
+  --grad9: linear-gradient(331deg, #4dffd4 4.04%, #b4ffa8 44.9%, #34ef95 88.4%);
+  --grad10: linear-gradient(331deg, #fff 4.04%, #b1ff67 46.22%, #4dffb4 88.4%);
+  --grad11: linear-gradient(
+    331deg,
+    #ef88ff 4.04%,
+    #ffec94 46.22%,
+    #4edeff 88.4%
+  );
+  --grad12: linear-gradient(315deg, #fff 0%, #ffa8a8 50%, #ff4dac 100%);
+  --grad13: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  --grad14: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+  --grad15: linear-gradient(to bottom, #ffefba, #ffffff);
+  --grad16: linear-gradient(to bottom, #dbd65c, #5614b0);
+  --grad17: linear-gradient(to bottom, #fceabb, #f8b500);
+  --grad18: linear-gradient(to bottom, #f79d00, #64f38c);
+}
+/* } */
+
+body {
+  background-color: var(--bg);
+}
+
+/* ANIMATIONS */
+@keyframes moveRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-25%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-25%);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideInX {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.heroImgLeft {
+  animation: slideDown 55s ease-in infinite;
+}
+
+.heroImgRight {
+  animation: slideIn 55s ease-in infinite;
+}
+
+.moveLeft {
+  animation: moveLeft 50s linear infinite;
+}
+.moveRight {
+  animation: moveRight 50s linear infinite;
+}
+
+.heroImgLeft,
+.heroImgRight {
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* MORE STYLES */
+.fccc {
+  @apply flex flex-col items-center justify-center;
+}
+
+.fcc {
+  @apply flex flex-col items-center;
+}
+
+.frc {
+  @apply flex flex-row items-center;
+}
+
+.frcsb {
+  @apply frc justify-between;
+}
+
+.gcc {
+  @apply grid items-center justify-center;
+}
+
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 17px 0;
+  width: 100%;
+  color: var(--a_bg2, #2a333e);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.btnOutline {
+  /* Set the background-clip to border-box to ensure the gradient covers the entire border box */
+  background-clip: padding-box, border-box;
+
+  /* Set the border to a transparent color and use the linear-gradient as the background */
+  border: 2px solid transparent;
+  background-image: linear-gradient(
+    60deg,
+    #cbff99 10%,
+    #c6f6b3 20%,
+    #d1f0a9 30%,
+    #f6db88 60%,
+    #e799ad 75%,
+    #d693e1 90%,
+    #b9a5f6 100%
+  );
+}
+
+.btnSml {
+  padding: 12px 14px;
+}
+
+/* text */
+h1 {
+  font-size: clamp(50px, 15vw, 84px);
+  color: #fff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 100%; /* 48px */
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--text, #99a8b8);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
+
+h4 {
+  color: var(--text, #99a8b8);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 36px */
+  text-transform: capitalize;
+}
+
+.gradText {
+  background: var(
+    --grad_border,
+    linear-gradient(
+      92deg,
+      #cbff99 0.15%,
+      #c6f6b3 20.37%,
+      #f6db88 39.56%,
+      #e799ad 60.29%,
+      #d693e1 79.48%,
+      #b9a5f6 99.7%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btnIcon {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 56px;
+  border: 1px solid #898c90;
+  background: linear-gradient(
+    180deg,
+    #cbff99 20.51%,
+    #c6f6b3 26.54%,
+    #d1f0a9 32.12%,
+    #f6db88 41.13%,
+    #e799ad 57.06%,
+    #d693e1 69.97%,
+    #b9a5f6 76.02%
+  );
+}
+
+.card {
+  border-radius: 10px;
+  border: 1px solid var(--border1, #3c4857);
+  background: var(--a_bg2, #2a333e);
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 30px;
+}
+
+.pt105 {
+  padding-top: 105px;
+}
+
+.fs0 {
+  flex-shrink: 0;
+}
+
+.bannerContainer {
+  display: inline-flex;
+  padding: 17px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+}
