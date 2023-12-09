@@ -2,9 +2,12 @@
   "name": "hardhat-project",
   "license": "MIT",
   "devDependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "dependencies": {
+    "@lighthouse-web3/sdk": "^0.3.0",
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
-    "dotenv": "^16.3.1",
-    "hardhat": "^2.19.1",
-    "hardhat-ethernal": "^3.2.5"
+    "ethers": "^5.7.2",
+    "hardhat": "^2.19.2"
   }
 }
