@@ -28,6 +28,7 @@ const Header = () => {
       >
         <Logo size={54} />
       </div>
+
       <ButtonOutline maxHeight={40} />
     </div>
   );
